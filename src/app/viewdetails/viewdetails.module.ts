@@ -1,15 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { ViewdetailsRoutingModule } from './viewdetails-routing.module';
+import { Routes, RouterModule } from '@angular/router';
 import { ViewdetailsComponent } from './viewdetails.component';
 
+const routes: Routes = [
+  {
+    path: "",
+    component: ViewdetailsComponent
+  }
+]
 
 @NgModule({
   declarations: [ViewdetailsComponent],
   imports: [
     CommonModule,
-    ViewdetailsRoutingModule
+    RouterModule.forChild(routes),
   ]
 })
 export class ViewdetailsModule { }
